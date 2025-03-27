@@ -10,7 +10,7 @@ const cofounders = [
   },
   {
     name: "Meagan McCliment",
-    position: "Co-Founder & Creative Director",
+    position: "Co-Founder & Chief Creative Officer",
     bio: "With over 10 years of technology experience and a focus on sustainable growth, Meagan McCliment brings a wide breadth of knowledge and design expertise to every project. Her unique perspective bridges the gap between design, sustainability, and technology to deliver exceptional results."
   },
   {
