@@ -1,9 +1,9 @@
-
 import { useState } from 'react';
 import { TreeDeciduous, Send, Mail, MapPin, Phone } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,16 +18,30 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const templateParams = {
+        to_email: 'william.g.parish@gmail.com',
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message
+      };
+      
+      console.log('Sending email with params:', templateParams);
+      
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
       toast.success("Message sent successfully! We'll be in touch soon.");
       setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error('Failed to send message. Please try again later.');
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
   
   return (
