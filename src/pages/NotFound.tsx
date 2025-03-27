@@ -1,5 +1,8 @@
+
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { LeafyGreen } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,11 +15,27 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground px-4">
+      <div className="text-center max-w-md">
+        <div className="mb-6 inline-block">
+          <div className={cn(
+            "w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center",
+            "animate-pulse-slow"
+          )}>
+            <LeafyGreen className="w-10 h-10 text-primary" />
+          </div>
+        </div>
+        
+        <h1 className="text-6xl font-display font-semibold mb-4 text-primary">404</h1>
+        <p className="text-xl text-foreground mb-6">Oops! This page seems to have wilted away.</p>
+        <p className="text-muted-foreground mb-8">
+          The page you're looking for doesn't exist or has been moved to another location.
+        </p>
+        
+        <a 
+          href="/" 
+          className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/20 inline-block"
+        >
           Return to Home
         </a>
       </div>
