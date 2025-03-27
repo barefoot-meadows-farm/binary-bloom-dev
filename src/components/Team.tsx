@@ -6,7 +6,7 @@ const cofounders = [
   {
     name: "William Parish",
     position: "Co-Founder & CEO",
-    bio: "With over 15 years in software development, William focuses on sustainable tech practices and innovative solutions that help businesses transform their digital presence."
+    bio: "With over 10 years of experience across organizations ranging from startups to large enterprises, William brings extensive expertise in Development, DevOps, and AI Architecture. He specializes in designing highly modular and scalable services that maximize performance while minimizing costs."
   },
   {
     name: "Zack Dunstan",
