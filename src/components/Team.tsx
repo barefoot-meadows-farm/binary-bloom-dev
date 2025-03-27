@@ -9,6 +9,11 @@ const cofounders = [
     bio: "With over 10 years of experience across organizations ranging from startups to large enterprises, William brings extensive expertise in Development, DevOps, and AI Architecture. He specializes in designing highly modular and scalable services that maximize performance while minimizing costs."
   },
   {
+    name: "Meagan McCliment",
+    position: "Co-Founder & Creative Director",
+    bio: "With over 10 years of technology experience and a focus on sustainable growth, Meagan McCliment brings a wide breadth of knowledge and design expertise to every project. Her unique perspective bridges the gap between design, sustainability, and technology to deliver exceptional results."
+  },
+  {
     name: "Zack Dunstan",
     position: "Co-Founder & CTO",
     bio: "Zack specializes in full-stack development and system architecture. With a background in cloud infrastructure, he ensures Binary Bloom's solutions are scalable, secure, and future-proof."
