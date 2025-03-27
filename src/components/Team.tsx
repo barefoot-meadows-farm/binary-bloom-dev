@@ -2,80 +2,56 @@
 import { TreeDeciduous } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
-const teamMembers = [
+const cofounders = [
   {
-    name: "Alex Morgan",
-    position: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-    bio: "With over 15 years in software development, Alex focuses on sustainable tech practices and innovative solutions."
+    name: "William Parish",
+    position: "Co-Founder & CEO",
+    bio: "With over 15 years in software development, William focuses on sustainable tech practices and innovative solutions that help businesses transform their digital presence."
   },
   {
-    name: "Jamie Chen",
-    position: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-    bio: "Jamie specializes in full-stack development and has led numerous successful enterprise-level projects."
-  },
-  {
-    name: "Riley Park",
-    position: "UX/UI Designer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-    bio: "Riley creates intuitive and beautiful interfaces with a focus on accessibility and user experience."
-  },
-  {
-    name: "Sam Wilson",
-    position: "Solutions Architect",
-    image: "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1774&q=80",
-    bio: "Sam designs and implements scalable system architectures that support business growth and innovation."
+    name: "Zack Dunstan",
+    position: "Co-Founder & CTO",
+    bio: "Zack specializes in full-stack development and system architecture. With a background in cloud infrastructure, he ensures Binary Bloom's solutions are scalable, secure, and future-proof."
   }
 ];
 
 const Team = () => {
   return (
-    <section id="team" className="section-padding relative overflow-hidden">
+    <section id="team" className="section-padding relative overflow-hidden py-20">
       <div className="absolute inset-0 bg-noise mix-blend-soft-light opacity-20"></div>
       
-      <div className="container max-w-7xl mx-auto">
+      <div className="container max-w-7xl mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full text-sm text-primary bg-primary/10 border border-primary/20 mb-4">
             <TreeDeciduous size={16} className="mr-2" />
-            <span>Our Team</span>
+            <span>Our Founders</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">
-            Meet the Innovators
+            Meet the Team
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our diverse team of experts brings passion and expertise to every project, ensuring exceptional results.
+            The visionaries behind Binary Bloom who are dedicated to creating exceptional digital experiences.
           </p>
         </AnimatedSection>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {teamMembers.map((member, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {cofounders.map((founder, index) => (
             <AnimatedSection 
               key={index} 
-              delay={index * 100} 
-              className="group"
+              delay={index * 100}
+              animationType="fade-in"
+              className="bg-card rounded-xl overflow-hidden border border-border p-8 hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5"
             >
-              <div className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
-                <div className="h-64 w-full overflow-hidden relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="h-full w-full object-cover object-center transition-all duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-70"></div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors">
-                    {member.name}
-                  </h3>
-                  <p className="text-primary text-sm mb-3">
-                    {member.position}
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-2xl font-display font-semibold mb-2 text-primary">
+                {founder.name}
+              </h3>
+              <p className="text-primary/80 font-medium mb-4">
+                {founder.position}
+              </p>
+              <div className="h-px w-full bg-border mb-6"></div>
+              <p className="text-muted-foreground">
+                {founder.bio}
+              </p>
             </AnimatedSection>
           ))}
         </div>
