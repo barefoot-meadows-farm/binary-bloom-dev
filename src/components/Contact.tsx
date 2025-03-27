@@ -1,5 +1,6 @@
+
 import { useState } from 'react';
-import { TreeDeciduous, Send, Mail, MapPin, Phone } from 'lucide-react';
+import { TreeDeciduous, Send, Mail, Phone } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
@@ -74,23 +75,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">hello@binarybloom.com</p>
+                    <p className="text-muted-foreground">william.g.parish@gmail.com</p>
                     <p className="text-muted-foreground">support@binarybloom.com</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-card rounded-xl p-6 border border-border hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
-                <div className="flex">
-                  <div className="mr-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                      <MapPin className="w-5 h-5" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1">Visit Us</h3>
-                    <p className="text-muted-foreground">123 Tech Park Avenue</p>
-                    <p className="text-muted-foreground">San Francisco, CA 94107</p>
                   </div>
                 </div>
               </div>
@@ -103,9 +89,9 @@ const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Call Us</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-muted-foreground">Mon-Fri: 9am - 6pm PST</p>
+                    <h3 className="text-lg font-semibold mb-1">Call or Text</h3>
+                    <p className="text-muted-foreground">(678) 977-4383</p>
+                    <p className="text-muted-foreground">Available 24/7</p>
                   </div>
                 </div>
               </div>
