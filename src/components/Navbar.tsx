@@ -2,11 +2,12 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { LeafyGreen } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,11 @@ const Navbar = () => {
     { name: 'Team', path: '/#team' },
     { name: 'Contact', path: '/#contact' }
   ];
+
+  const isActive = (path: string) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path);
+  };
 
   return (
     <nav
@@ -55,7 +61,12 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                className={cn(
+                  "text-sm font-medium transition-colors relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-primary after:transition-all",
+                  isActive(item.path) 
+                    ? "text-primary after:w-full" 
+                    : "text-foreground/80 hover:text-primary after:w-0 hover:after:w-full"
+                )}
               >
                 {item.name}
               </Link>
@@ -102,7 +113,10 @@ const Navbar = () => {
               key={item.name}
               to={item.path}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+              className={cn(
+                "text-lg font-medium transition-colors",
+                isActive(item.path) ? "text-primary" : "text-foreground hover:text-primary"
+              )}
             >
               {item.name}
             </Link>

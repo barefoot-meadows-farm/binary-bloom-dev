@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { TreeDeciduous, Send, Mail, Phone } from 'lucide-react';
+import { TreeDeciduous, Send, Mail, Phone, ExternalLink } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
@@ -75,7 +75,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">contact@binarybloom.dev</p>
+                    <a 
+                      href="mailto:contact@binarybloom.dev" 
+                      className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+                    >
+                      contact@binarybloom.dev
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -89,7 +95,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Call or Text</h3>
-                    <p className="text-muted-foreground">(423) 717-7569</p>
+                    <a 
+                      href="tel:+14237177569" 
+                      className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+                    >
+                      (423) 717-7569
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
                     <p className="text-muted-foreground">Available 24/7</p>
                   </div>
                 </div>
