@@ -25,7 +25,7 @@ const Contact = () => {
     
     try {
       const templateParams = {
-        to_email: 'william.g.parish@gmail.com',
+        to_email: 'contact@binarybloom.dev',
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message
@@ -75,8 +75,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">william.g.parish@gmail.com</p>
-                    <p className="text-muted-foreground">support@binarybloom.com</p>
+                    <p className="text-muted-foreground">contact@binarybloom.dev</p>
                   </div>
                 </div>
               </div>
@@ -90,7 +89,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Call or Text</h3>
-                    <p className="text-muted-foreground">(678) 977-4383</p>
+                    <p className="text-muted-foreground">(423) 717-7569</p>
                     <p className="text-muted-foreground">Available 24/7</p>
                   </div>
                 </div>
