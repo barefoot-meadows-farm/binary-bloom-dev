@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { LeafyGreen } from 'lucide-react';
@@ -32,6 +31,7 @@ const Navbar = () => {
 
   const isActive = (path: string) => {
     if (path === '/') return location.pathname === '/';
+    if (path.startsWith('/#')) return false; // These are anchor links
     return location.pathname.startsWith(path);
   };
 
@@ -58,26 +58,41 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           <div className="flex items-center gap-6">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={cn(
-                  "text-sm font-medium transition-colors relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-primary after:transition-all",
-                  isActive(item.path) 
-                    ? "text-primary after:w-full" 
-                    : "text-foreground/80 hover:text-primary after:w-0 hover:after:w-full"
-                )}
-              >
-                {item.name}
-              </Link>
+              item.path.startsWith('/#') ? (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  className={cn(
+                    "text-sm font-medium transition-colors relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-primary after:transition-all",
+                    location.pathname === '/' && location.hash === item.path.substring(1)
+                      ? "text-primary after:w-full" 
+                      : "text-foreground/80 hover:text-primary after:w-0 hover:after:w-full"
+                  )}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={cn(
+                    "text-sm font-medium transition-colors relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-primary after:transition-all",
+                    isActive(item.path) 
+                      ? "text-primary after:w-full" 
+                      : "text-foreground/80 hover:text-primary after:w-0 hover:after:w-full"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
-          <Link
-            to="/#contact"
+          <a
+            href="/#contact"
             className="px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary font-medium text-sm transition-all hover:shadow-lg hover:shadow-primary/10"
           >
             Get Started
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -109,25 +124,41 @@ const Navbar = () => {
       )}>
         <div className="flex flex-col items-center gap-6 px-4">
           {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={cn(
-                "text-lg font-medium transition-colors",
-                isActive(item.path) ? "text-primary" : "text-foreground hover:text-primary"
-              )}
-            >
-              {item.name}
-            </Link>
+            item.path.startsWith('/#') ? (
+              <a
+                key={item.name}
+                href={item.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={cn(
+                  "text-lg font-medium transition-colors",
+                  location.pathname === '/' && location.hash === item.path.substring(1)
+                    ? "text-primary" 
+                    : "text-foreground hover:text-primary"
+                )}
+              >
+                {item.name}
+              </a>
+            ) : (
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={cn(
+                  "text-lg font-medium transition-colors",
+                  isActive(item.path) ? "text-primary" : "text-foreground hover:text-primary"
+                )}
+              >
+                {item.name}
+              </Link>
+            )
           ))}
-          <Link
-            to="/#contact"
+          <a
+            href="/#contact"
             onClick={() => setIsMobileMenuOpen(false)}
             className="mt-4 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/20"
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

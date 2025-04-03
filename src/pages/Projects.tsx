@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
 import AnimatedSection from '@/components/AnimatedSection';
+import ScrollToAnchor from '@/components/ScrollToAnchor';
 import { Layers } from 'lucide-react';
 
 const Projects = () => {
@@ -27,6 +28,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
+      <ScrollToAnchor />
       
       <main className="pt-24 section-padding">
         <div className="container max-w-7xl mx-auto">
