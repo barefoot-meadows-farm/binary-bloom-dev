@@ -15,6 +15,11 @@ const ProjectsShowcase = () => {
       title: "TicTacToeToolbox.com",
       description: "Educational platform to learn programming concepts through game development",
       url: "https://tictactoetoolbox.com"
+    },
+    {
+      title: "BarefootMeadowsFarm.com",
+      description: "Sustainable farming website connecting local produce with conscious consumers",
+      url: "https://barefootmeadowsfarm.com"
     }
   ];
 
@@ -34,7 +39,7 @@ const ProjectsShowcase = () => {
           </p>
         </AnimatedSection>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
           {featuredProjects.map((project, index) => (
             <AnimatedSection key={index} delay={index * 100}>
               <a 

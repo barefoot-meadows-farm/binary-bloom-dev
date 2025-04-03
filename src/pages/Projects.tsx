@@ -16,6 +16,11 @@ const Projects = () => {
       title: "TicTacToeToolbox.com",
       description: "An educational platform that uses the simple game of Tic-Tac-Toe to teach programming concepts, game theory, and AI algorithms. Perfect for beginners learning about game development and strategic thinking.",
       url: "https://tictactoetoolbox.com"
+    },
+    {
+      title: "BarefootMeadowsFarm.com",
+      description: "A vibrant online presence for Barefoot Meadows Farm, showcasing sustainable farming practices, locally grown produce, and community-supported agriculture initiatives. The site connects local farmers with conscious consumers.",
+      url: "https://barefootmeadowsfarm.com"
     }
   ];
 
