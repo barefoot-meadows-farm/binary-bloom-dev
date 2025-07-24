@@ -119,46 +119,48 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className={cn(
-        "fixed inset-0 z-40 bg-background/95 backdrop-blur-md transition-transform duration-300 md:hidden pt-24",
+        "fixed inset-0 z-[60] bg-background/98 backdrop-blur-lg transition-transform duration-300 md:hidden",
         isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
-        <div className="flex flex-col items-center gap-6 px-4">
-          {navItems.map((item) => (
-            item.path.startsWith('/#') ? (
-              <a
-                key={item.name}
-                href={item.path}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={cn(
-                  "text-lg font-medium transition-colors",
-                  location.pathname === '/' && location.hash === item.path.substring(1)
-                    ? "text-primary" 
-                    : "text-foreground hover:text-primary"
-                )}
-              >
-                {item.name}
-              </a>
-            ) : (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={cn(
-                  "text-lg font-medium transition-colors",
-                  isActive(item.path) ? "text-primary" : "text-foreground hover:text-primary"
-                )}
-              >
-                {item.name}
-              </Link>
-            )
-          ))}
-          <a
-            href="/#contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-4 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/20"
-          >
-            Get Started
-          </a>
+        <div className="pt-20 h-full overflow-y-auto">
+          <div className="flex flex-col items-center gap-6 px-4">
+            {navItems.map((item) => (
+              item.path.startsWith('/#') ? (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "text-lg font-medium transition-colors",
+                    location.pathname === '/' && location.hash === item.path.substring(1)
+                      ? "text-primary" 
+                      : "text-foreground hover:text-primary"
+                  )}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "text-lg font-medium transition-colors",
+                    isActive(item.path) ? "text-primary" : "text-foreground hover:text-primary"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              )
+            ))}
+            <a
+              href="/#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-4 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:shadow-primary/20"
+            >
+              Get Started
+            </a>
+          </div>
         </div>
       </div>
     </nav>
