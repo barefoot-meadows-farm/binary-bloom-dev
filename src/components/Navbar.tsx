@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8 lg:px-16',
+        'fixed top-0 left-0 right-0 z-[100] transition-all duration-300 py-4 px-4 md:px-8 lg:px-16',
         isScrolled ? 'glass-dark py-3 backdrop-blur-md' : 'bg-transparent'
       )}
     >
@@ -119,7 +119,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className={cn(
-        "fixed inset-0 z-[60] bg-background/98 backdrop-blur-lg transition-transform duration-300 md:hidden",
+        "fixed inset-0 z-[110] bg-background/98 backdrop-blur-lg transition-transform duration-300 md:hidden",
         isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <div className="pt-20 h-full overflow-y-auto">
