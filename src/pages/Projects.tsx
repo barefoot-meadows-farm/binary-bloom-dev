@@ -9,19 +9,14 @@ import { Layers } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "StoryGen.dev",
-      description: "A powerful tool for developers and writers to create interactive narratives and branching storylines with the help of AI. StoryGen helps you build engaging stories with multiple possible paths and outcomes.",
-      url: "https://storygen.dev"
-    },
-    {
-      title: "TicTacToeToolbox.com",
-      description: "An educational platform that uses the simple game of Tic-Tac-Toe to teach programming concepts, game theory, and AI algorithms. Perfect for beginners learning about game development and strategic thinking.",
-      url: "https://tictactoetoolbox.com"
-    },
-    {
       title: "BarefootMeadowsFarm.com",
       description: "A vibrant online presence for Barefoot Meadows Farm, showcasing sustainable farming practices, locally grown produce, and community-supported agriculture initiatives. The site connects local farmers with conscious consumers.",
       url: "https://barefootmeadowsfarm.com"
+    },
+    {
+      title: "Day To Day Farm",
+      description: "Farm Chore Tracking app that simplifies the task of tracking multiple flocks/herds/etc, helping farmers stay organized and efficient with their daily farm management tasks.",
+      url: "https://www.daytodayfarm.com/"
     },
     {
       title: "Hatch Around",
@@ -29,9 +24,9 @@ const Projects = () => {
       url: "https://hatcharound.com/"
     },
     {
-      title: "Hawkins Little Stichery",
-      description: "Boutique alterations and custom sewing shop offering personalized tailoring services, custom garments, and expert alterations with attention to detail and craftsmanship.",
-      url: "https://hawkinslittlestichery.com/"
+      title: "Rocky Pops",
+      description: "All Natural boutique Local Popsicle stand offering handcrafted, artisanal popsicles made with natural ingredients and creative flavor combinations for a refreshing treat.",
+      url: "https://www.rockypops.com/"
     },
     {
       title: "Good Faith Property Solutions",
@@ -39,14 +34,19 @@ const Projects = () => {
       url: "https://goodfaithproperty.com/"
     },
     {
-      title: "Rocky Pops",
-      description: "All Natural boutique Local Popsicle stand offering handcrafted, artisanal popsicles made with natural ingredients and creative flavor combinations for a refreshing treat.",
-      url: "https://www.rockypops.com/"
+      title: "StoryGen.dev",
+      description: "A powerful tool for developers and writers to create interactive narratives and branching storylines with the help of AI. StoryGen helps you build engaging stories with multiple possible paths and outcomes.",
+      url: "https://storygen.dev"
     },
     {
-      title: "Day To Day Farm",
-      description: "Farm Chore Tracking app that simplifies the task of tracking multiple flocks/herds/etc, helping farmers stay organized and efficient with their daily farm management tasks.",
-      url: "https://www.daytodayfarm.com/"
+      title: "Hawkins Little Stichery",
+      description: "Boutique alterations and custom sewing shop offering personalized tailoring services, custom garments, and expert alterations with attention to detail and craftsmanship.",
+      url: "https://hawkinslittlestichery.com/"
+    },
+    {
+      title: "TicTacToeToolbox.com",
+      description: "An educational platform that uses the simple game of Tic-Tac-Toe to teach programming concepts, game theory, and AI algorithms. Perfect for beginners learning about game development and strategic thinking.",
+      url: "https://tictactoetoolbox.com"
     }
   ];
 
