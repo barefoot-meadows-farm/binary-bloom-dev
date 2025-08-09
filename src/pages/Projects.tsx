@@ -10,7 +10,7 @@ const Projects = () => {
   const projects = [
     {
       title: "BarefootMeadowsFarm.com",
-      description: "A vibrant online presence for Barefoot Meadows Farm, showcasing sustainable farming practices, locally grown produce, and community-supported agriculture initiatives. The site connects local farmers with conscious consumers.",
+      description: "A passionate small farm dedicated to clean, old-school farming practices and artisanal craftsmanship. Beyond sustainable agriculture, they create beautiful custom quilts with traditional techniques, blending farm life with timeless handmade artistry.",
       url: "https://barefootmeadowsfarm.com"
     },
     {
