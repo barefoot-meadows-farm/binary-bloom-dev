@@ -22,6 +22,31 @@ const Projects = () => {
       title: "BarefootMeadowsFarm.com",
       description: "A vibrant online presence for Barefoot Meadows Farm, showcasing sustainable farming practices, locally grown produce, and community-supported agriculture initiatives. The site connects local farmers with conscious consumers.",
       url: "https://barefootmeadowsfarm.com"
+    },
+    {
+      title: "Hatch Around",
+      description: "Chick Hatchery Price Comparison Tool that helps poultry enthusiasts find the best deals on chicks from various hatcheries, making it easier to start or expand your flock.",
+      url: "https://hatcharound.com/"
+    },
+    {
+      title: "Hawkins Little Stichery",
+      description: "Boutique alterations and custom sewing shop offering personalized tailoring services, custom garments, and expert alterations with attention to detail and craftsmanship.",
+      url: "https://hawkinslittlestichery.com/"
+    },
+    {
+      title: "Good Faith Property Solutions",
+      description: "Real Estate business in Charleston, SC specializing in property solutions, investments, and helping clients navigate the Charleston real estate market with integrity and expertise.",
+      url: "https://goodfaithproperty.com/"
+    },
+    {
+      title: "Rocky Pops",
+      description: "All Natural boutique Local Popsicle stand offering handcrafted, artisanal popsicles made with natural ingredients and creative flavor combinations for a refreshing treat.",
+      url: "https://www.rockypops.com/"
+    },
+    {
+      title: "Day To Day Farm",
+      description: "Farm Chore Tracking app that simplifies the task of tracking multiple flocks/herds/etc, helping farmers stay organized and efficient with their daily farm management tasks.",
+      url: "https://www.daytodayfarm.com/"
     }
   ];
 
