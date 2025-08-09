@@ -61,20 +61,6 @@ const Team = () => {
           ))}
         </div>
         
-        <AnimatedSection delay={300} className="mt-20 text-center">
-          <h3 className="text-2xl md:text-3xl font-display font-semibold mb-6">
-            Join Our Growing Team
-          </h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            We're always looking for talented individuals who are passionate about creating innovative digital solutions.
-          </p>
-          <a 
-            href="#contact" 
-            className="px-8 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium transition-all hover:bg-secondary/80 border border-border inline-flex items-center"
-          >
-            View Open Positions
-          </a>
-        </AnimatedSection>
       </div>
     </section>
   );
